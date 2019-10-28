@@ -62,7 +62,6 @@ Page({
     },
 
     onScale(e) {
-        console.log(e)
         this.setData({
             scale: e.detail.scale
         })
