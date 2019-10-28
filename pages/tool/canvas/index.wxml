@@ -1,0 +1,15 @@
+<!-- pages/markPapers/index.wxml -->
+<view class="mark-papers">
+    <movable-area class="c-container">
+        <movable-view direction="all" scale="true" scale-value="{{scale}}" bindscale="onScale" style="width: {{canvasInfo.w}}px; height: {{canvasInfo.h}}px; background: pink;">
+            <canvas canvas-id="handle-write" style="width: {{canvasInfo.w}}px; height: {{canvasInfo.h}}px; transform: scale({{scale}})"></canvas>
+        </movable-view>
+    </movable-area>
+    <cover-view class="footer">
+        <cover-view class="score-scroll" id="score-scroll" catchtouchstart="{{tool.touchStart}}" catchtouchmove="{{tool.touchMove}}" catchtouchend="{{tool.touchEnd}}">
+            <cover-view class="wrap" id="score-scroll-wrap">
+                <cover-view class="btn" wx:for="{{arr}}" wx:key="{{index}}">{{index}}</cover-view>
+            </cover-view>
+        </cover-view>
+    </cover-view>
+</view>

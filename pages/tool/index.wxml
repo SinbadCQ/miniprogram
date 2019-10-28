@@ -1,0 +1,3 @@
+<view class="tool-page">
+<button bind:tap="openCanvas">canvas</button>
+</view>
